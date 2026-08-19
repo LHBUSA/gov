@@ -1,0 +1,35 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/assets/gov-official-managed-layer.webp", "destination": "/assets/gov-official-managed-layer.svg" },
+    { "source": "/assets/gov-official-managed-layer-960.webp", "destination": "/assets/gov-official-managed-layer.svg" },
+    { "source": "/assets/gov-county-operating-model.webp", "destination": "/assets/gov-county-operating-model.svg" },
+    { "source": "/assets/gov-county-operating-model-960.webp", "destination": "/assets/gov-county-operating-model.svg" },
+    { "source": "/assets/gov-governance-trust-pipeline.webp", "destination": "/assets/gov-governance-trust-pipeline.svg" },
+    { "source": "/assets/gov-governance-trust-pipeline-960.webp", "destination": "/assets/gov-governance-trust-pipeline.svg" },
+    { "source": "/assets/gov-county-network-flywheel.webp", "destination": "/assets/gov-county-network-flywheel.svg" },
+    { "source": "/assets/gov-county-network-flywheel-960.webp", "destination": "/assets/gov-county-network-flywheel.svg" },
+    { "source": "/assets/gov-county-briefing.webp", "destination": "/assets/gov-county-briefing.svg" },
+    { "source": "/assets/gov-county-briefing-960.webp", "destination": "/assets/gov-county-briefing.svg" },
+    { "source": "/gov-social-card.png", "destination": "/desktop-top(1).png" },
+    { "source": "/favicon.ico", "destination": "/favicon.svg" },
+    { "source": "/apple-touch-icon.png", "destination": "/favicon.svg" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ]
+}
