@@ -8,92 +8,36 @@ const swaps={
   'gov-county-briefing':'gov-county-briefing.svg'
 };
 
-const desktopLayoutFix=`<style id="gov-desktop-layout-fix">
+const productionCss=`<style id="gov-production-fixes">
 @media (min-width:900px) and (max-width:1100px){
-  header .nav{gap:12px}
-  header .brand{gap:8px}
-  header .brand-mark{width:34px;flex-basis:34px}
-  header .brand-copy strong{font-size:16px}
-  header .brand-copy small{font-size:5.8px}
-  header .brand-gov{font-size:6.5px;padding:2px 6px}
-  header .nav-links{display:flex;align-items:center;gap:10px}
-  header .nav-links a{font-size:10px;white-space:nowrap}
-  header .nav-actions .btn-secondary{display:none}
-  header .nav-actions .btn-primary{display:inline-flex;min-height:36px;padding:8px 10px;font-size:8px;white-space:nowrap}
-  header .menu-button{display:none}
-  .mobile-menu,.mobile-menu.open{display:none!important}
+  header .nav{gap:12px}header .brand{gap:8px}header .brand-mark{width:34px;flex-basis:34px}header .brand-copy strong{font-size:16px}header .brand-copy small{font-size:5.8px}header .brand-gov{font-size:6.5px;padding:2px 6px}header .nav-links{display:flex;align-items:center;gap:10px}header .nav-links a{font-size:10px;white-space:nowrap}header .nav-actions .btn-secondary{display:none}header .nav-actions .btn-primary{display:inline-flex;min-height:36px;padding:8px 10px;font-size:8px;white-space:nowrap}header .menu-button{display:none}.mobile-menu,.mobile-menu.open{display:none!important}
+  .hero-inner{grid-template-columns:minmax(0,.86fr) minmax(440px,1.14fr);gap:40px;min-height:720px;padding-top:86px}.hero-copy{max-width:700px}.hero-visual,.architecture{max-width:none}.principles-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.principle{border-bottom:0}.principle:nth-child(odd){border-left:0}.principle:first-child{border-left:1px solid var(--line)}.principle:last-child{grid-column:auto}.section-header{grid-template-columns:minmax(0,.9fr) minmax(330px,.7fr)}.proof-shell{grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr)}.economics-shell{grid-template-columns:minmax(0,.82fr) minmax(460px,1.18fr)}.governance-grid{grid-template-columns:minmax(0,.82fr) minmax(440px,1.18fr)}.pilot{grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr)}.faq-wrap{grid-template-columns:minmax(0,.72fr) minmax(500px,1.28fr)}.economics-copy,.faq-intro{position:sticky;top:120px}.model-flow{grid-template-columns:repeat(4,minmax(0,1fr))}.model-step:nth-child(2){border-right:1px solid rgba(255,255,255,.1)}.model-step:nth-child(-n+2){border-bottom:0}.model-step:nth-child(2)::after{display:block}.case-grid,.partner-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.case-card{min-height:310px}.use-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.security-shell{grid-template-columns:260px minmax(0,1fr)}.security-control-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.sandbox-header{grid-template-columns:minmax(0,.9fr) minmax(340px,.7fr)}.sandbox-shell{grid-template-columns:minmax(300px,.7fr) minmax(0,1.3fr)}.roi-calculator{grid-template-columns:minmax(300px,.76fr) minmax(0,1.24fr)}.briefing-booking{grid-template-columns:minmax(0,.86fr) minmax(440px,1.14fr)}.sandbox-controls{border-right:1px solid rgba(255,255,255,.09);border-bottom:0}.roi-controls{border-right:1px solid var(--line);border-bottom:0}.briefing-story{max-width:none}
+}
 
-  .hero-inner{grid-template-columns:minmax(0,.86fr) minmax(440px,1.14fr);gap:40px;min-height:720px;padding-top:86px}
-  .hero-copy{max-width:700px}
-  .hero-visual{max-width:none}
-  .architecture{max-width:none}
-
-  .principles-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
-  .principle{border-bottom:0}
-  .principle:nth-child(odd){border-left:0}
-  .principle:first-child{border-left:1px solid var(--line)}
-  .principle:last-child{grid-column:auto}
-
-  .section-header{grid-template-columns:minmax(0,.9fr) minmax(330px,.7fr)}
-  .proof-shell{grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr)}
-  .economics-shell{grid-template-columns:minmax(0,.82fr) minmax(460px,1.18fr)}
-  .governance-grid{grid-template-columns:minmax(0,.82fr) minmax(440px,1.18fr)}
-  .pilot{grid-template-columns:minmax(0,.9fr) minmax(420px,1.1fr)}
-  .faq-wrap{grid-template-columns:minmax(0,.72fr) minmax(500px,1.28fr)}
-  .economics-copy,.faq-intro{position:sticky;top:120px}
-
-  .model-flow{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .model-step:nth-child(2){border-right:1px solid rgba(255,255,255,.1)}
-  .model-step:nth-child(-n+2){border-bottom:0}
-  .model-step:nth-child(2)::after{display:block}
-
-  .case-grid,.partner-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .case-card{min-height:310px}
-  .use-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .footer-main{grid-template-columns:1.2fr repeat(3,minmax(0,.55fr))}
-
-  .security-shell{grid-template-columns:260px minmax(0,1fr)}
-  .security-control-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
-  .sandbox-header{grid-template-columns:minmax(0,.9fr) minmax(340px,.7fr)}
-  .sandbox-shell{grid-template-columns:minmax(300px,.7fr) minmax(0,1.3fr)}
-  .roi-calculator{grid-template-columns:minmax(300px,.76fr) minmax(0,1.24fr)}
-  .briefing-booking{grid-template-columns:minmax(0,.86fr) minmax(440px,1.14fr)}
-  .sandbox-controls{border-right:1px solid rgba(255,255,255,.09);border-bottom:0}
-  .roi-controls{border-right:1px solid var(--line);border-bottom:0}
-  .briefing-story{max-width:none}
+footer{position:relative;overflow:hidden;background:#061426}footer:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 82% 0%,rgba(31,93,216,.2),transparent 34%),radial-gradient(circle at 4% 96%,rgba(239,51,64,.08),transparent 28%)}.footer-main,.footer-bottom{position:relative;z-index:1}.footer-main{grid-template-columns:minmax(280px,1.05fr) minmax(0,1.95fr)!important;gap:56px;padding:64px 0 44px}.footer-brand p{max-width:470px;color:rgba(255,255,255,.54)}.footer-eyebrow{margin:0 0 14px;color:#88aff7;font-family:var(--mono);font-size:8px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.footer-actions{display:flex;flex-wrap:wrap;gap:9px}.footer-network{display:grid;gap:18px}.footer-network-head{display:flex;align-items:end;justify-content:space-between;gap:24px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,.1)}.footer-network-head strong{display:block;color:#fff;font-size:17px}.footer-network-head span{max-width:390px;color:rgba(255,255,255,.42);font-size:10px;line-height:1.6;text-align:right}.footer-product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.footer-product{position:relative;min-height:128px;padding:18px 40px 18px 18px;border:1px solid rgba(255,255,255,.11);border-radius:14px;background:rgba(255,255,255,.045);color:#fff;text-decoration:none;transition:.18s ease}.footer-product:hover{transform:translateY(-2px);border-color:rgba(136,175,247,.42);background:rgba(31,93,216,.12)}.footer-product b{display:block;margin-bottom:7px;font-size:14px}.footer-product span{display:block;color:rgba(255,255,255,.46);font-size:10px;line-height:1.55}.footer-product em{display:inline-block;margin-top:12px;color:#8eb7ff;font-family:var(--mono);font-size:8px;font-style:normal;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.footer-product:after{content:'↗';position:absolute;top:17px;right:17px;color:rgba(255,255,255,.4);font-size:15px}.footer-nav-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding-top:3px}
+@media(max-width:1100px){.footer-main{grid-template-columns:1fr!important;gap:36px}.footer-network-head{align-items:start}}
+@media(max-width:720px){
+  .footer-product-grid,.footer-nav-row{grid-template-columns:1fr}.footer-network-head{display:grid;gap:8px}.footer-network-head span{text-align:left}.footer-actions{display:grid}.footer-actions .btn{width:100%}
+  .visual-frame{overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin}.visual-frame img{width:760px!important;max-width:none!important;height:auto!important}.visual-expand{position:sticky!important;left:calc(100% - 94px);bottom:8px;display:flex!important;width:max-content;margin:-42px 8px 8px auto;z-index:5}.hero-visual figcaption,.editorial-visual figcaption{padding-top:10px}.hero-visual figcaption:before,.editorial-visual figcaption:before{content:'SWIPE DIAGRAM • TAP EXPAND';display:block;margin-bottom:3px;color:var(--blue);font-family:var(--mono);font-size:8px;font-weight:900;letter-spacing:.08em}.model-section .editorial-visual figcaption:before,.governance-section .editorial-visual figcaption:before{color:#8db8ff}
+  .image-lightbox{display:block;padding:48px 0 0;overflow:hidden}.image-lightbox[hidden]{display:none}.lightbox-stage{width:100vw;max-height:calc(100vh - 48px);padding:12px;overflow:auto;-webkit-overflow-scrolling:touch}.lightbox-stage img{width:900px!important;max-width:none!important;height:auto;border-radius:10px}.lightbox-stage p{width:900px;max-width:none;text-align:left;padding-bottom:20px}.lightbox-close{top:8px;right:8px;background:#fff;color:#071a33}
 }
 </style>`;
 
+const footerHtml=`<footer><div class="shell footer-main"><div class="footer-brand"><div class="footer-eyebrow">PropTechUSA Government</div><a class="brand" href="#top" aria-label="PropTechUSA Gov home"><svg class="brand-mark" viewBox="0 0 44 48" aria-hidden="true"><path d="M22 3.5 39.3 9.6v11.7c0 11.6-6.7 20.1-17.3 24.3C11.4 41.4 4.7 32.9 4.7 21.3V9.6Z" fill="#1f5dd8" stroke="#7db5ff"/><rect x="11.3" y="26" width="5.5" height="10.8" rx="1.2" fill="#ef3340"/><rect x="19.3" y="20.8" width="5.5" height="16" rx="1.2" fill="#fff"/><rect x="27.3" y="14.2" width="5.5" height="22.6" rx="1.2" fill="#7db5ff"/></svg><span class="brand-copy"><strong style="color:#fff">PropTech<span>USA</span>.ai <b class="brand-gov">GOV</b></strong><small style="color:rgba(255,255,255,.45)">LOCAL DATA INFRASTRUCTURE</small></span></a><p>Modern, source-governed data infrastructure for counties and public institutions — built to make official property information easier to operate, access, and trust.</p><div class="footer-actions"><a class="btn btn-light" href="#book-briefing">Request a County Briefing</a><a class="btn btn-secondary" href="https://www.proptechusa.ai/" target="_blank" rel="noopener">Visit PropTechUSA.ai</a></div></div><div class="footer-network"><div class="footer-network-head"><div><div class="footer-title">PropTechUSA Network</div><strong>One ecosystem. Purpose-built products.</strong></div><span>Explore the data, security, intelligence, and company platforms behind the PropTechUSA ecosystem.</span></div><div class="footer-product-grid"><a class="footer-product" href="https://propdata.proptechusa.ai/" target="_blank" rel="noopener"><b>PropData</b><span>Real estate intelligence and property data infrastructure.</span><em>Explore PropData</em></a><a class="footer-product" href="https://propsecure.proptechusa.ai/" target="_blank" rel="noopener"><b>PropSecure</b><span>Security-focused infrastructure for the PropTechUSA ecosystem.</span><em>Explore PropSecure</em></a><a class="footer-product" href="https://data.proptechusa.ai/" target="_blank" rel="noopener"><b>Data Platform</b><span>Direct access to PropTechUSA data products and services.</span><em>Explore Data</em></a><a class="footer-product" href="https://www.proptechusa.ai/" target="_blank" rel="noopener"><b>PropTechUSA.ai</b><span>AI, PropTech, APIs, and production software from PropTechUSA.</span><em>Visit Company</em></a></div><div class="footer-nav-row"><div><div class="footer-title">Program</div><div class="footer-links"><a href="#case">The Case</a><a href="#sandbox">API Sandbox</a><a href="#model">Operating Model</a><a href="#roi">ROI Calculator</a><a href="#pilot">Pilot + Booking</a></div></div><div><div class="footer-title">Contact</div><div class="footer-links"><a href="mailto:sales@proptechusa.ai">sales@proptechusa.ai</a><a href="tel:18887843881">1-888-784-3881</a><a href="#book-briefing">Schedule a briefing</a></div></div></div></div></div><div class="shell footer-bottom"><span>&copy; <span id="year">2026</span> PropTechUSA.ai. All rights reserved.</span><span class="legal-note">Commercial access, subscription fees, revenue sharing, platform rights, and public-record delivery are subject to applicable law, county policy, procurement requirements, and an executed agreement. This page is a program overview, not legal advice or a binding offer.</span></div></footer>`;
+
 function transform(html){
   html=html.replace(/<source\b[^>]*gov-[^>]*\.webp[^>]*>/gi,'');
-
-  for(const [base,file] of Object.entries(swaps)){
-    html=html.replace(
-      new RegExp(`assets/${base}(?:-960)?\\.webp`,'g'),
-      `/assets/${file}`
-    );
-  }
-
-  html=html.replace(
-    /<link\s+rel="preload"\s+as="image"\s+href="[^"]*gov-official-managed-layer[^"]*"[^>]*>/i,
-    '<link rel="preload" as="image" href="/assets/gov-official-managed-layer.svg" type="image/svg+xml" fetchpriority="high">'
-  );
-
-  html=html.replace('</head>',`${desktopLayoutFix}</head>`);
+  for(const [base,file] of Object.entries(swaps)) html=html.replace(new RegExp(`assets/${base}(?:-960)?\\.webp`,'g'),`/assets/${file}`);
+  html=html.replace(/<link\s+rel="preload"\s+as="image"\s+href="[^"]*gov-official-managed-layer[^"]*"[^>]*>/i,'<link rel="preload" as="image" href="/assets/gov-official-managed-layer.svg" type="image/svg+xml" fetchpriority="high">');
+  html=html.replace(/<footer>[\s\S]*?<\/footer>/i,footerHtml);
+  html=html.replace('</head>',`${productionCss}</head>`);
   return html;
 }
 
 export default async function handler(req,res){
   try{
-    const r=await fetch(SOURCE,{
-      headers:{
-        accept:'text/html,application/xhtml+xml',
-        'user-agent':'PropTechUSA-Gov-Renderer/1.0'
-      }
-    });
-
+    const r=await fetch(SOURCE,{headers:{accept:'text/html,application/xhtml+xml','user-agent':'PropTechUSA-Gov-Renderer/1.0'}});
     if(!r.ok) throw new Error(`GitHub source returned ${r.status}`);
-
     res.setHeader('Content-Type','text/html; charset=utf-8');
     res.setHeader('Cache-Control','no-store, max-age=0');
     res.status(200).send(transform(await r.text()));
