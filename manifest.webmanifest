@@ -1,0 +1,18 @@
+{
+  "name": "PropTechUSA Gov",
+  "short_name": "PropTechUSA Gov",
+  "description": "County-controlled data modernization and official API infrastructure.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#071a33",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
