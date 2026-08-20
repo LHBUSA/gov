@@ -1,8 +1,8 @@
 {
   "version": 2,
   "routes": [
-    { "src": "^/$", "dest": "/api/render.js" },
-    { "src": "^/index\\.html$", "dest": "/api/render.js" },
+    { "src": "^/$", "dest": "/api/render-v7.js" },
+    { "src": "^/index\\.html$", "dest": "/api/render-v7.js" },
     { "src": "^/assets/gov-official-managed-layer-960\\.webp$", "dest": "/assets/gov-official-managed-layer-mobile.svg" },
     { "src": "^/assets/gov-official-managed-layer\\.webp$", "dest": "/assets/gov-official-managed-layer.svg" },
     { "src": "^/assets/gov-county-operating-model-960\\.webp$", "dest": "/assets/gov-county-operating-model-mobile.svg" },
