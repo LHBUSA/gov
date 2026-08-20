@@ -1,7 +1,8 @@
 {
   "version": 2,
   "routes": [
-    { "handle": "filesystem" },
+    { "src": "^/$", "dest": "/api/render.js" },
+    { "src": "^/index\\.html$", "dest": "/api/render.js" },
     { "src": "^/assets/gov-official-managed-layer-960\\.webp$", "dest": "/assets/gov-official-managed-layer-mobile.svg" },
     { "src": "^/assets/gov-official-managed-layer\\.webp$", "dest": "/assets/gov-official-managed-layer.svg" },
     { "src": "^/assets/gov-county-operating-model-960\\.webp$", "dest": "/assets/gov-county-operating-model-mobile.svg" },
@@ -14,7 +15,7 @@
     { "src": "^/assets/gov-county-briefing\\.webp$", "dest": "/assets/gov-county-briefing.svg" },
     { "src": "^/gov-social-card\\.png$", "dest": "/desktop-top(1).png" },
     { "src": "^/(?:favicon\\.ico|apple-touch-icon\\.png|icon-192\\.png|icon-512\\.png)$", "dest": "/favicon.svg" },
-    { "src": "^/$", "dest": "/index.html" }
+    { "handle": "filesystem" }
   ],
   "headers": [
     {
