@@ -1,105 +1,30 @@
 {
   "version": 2,
   "routes": [
-    {
-      "src": "^/$",
-      "dest": "/api/render.js"
-    },
-    {
-      "src": "^/index\\.html$",
-      "dest": "/api/render.js"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "^/assets/gov-official-managed-layer(?:-960)?\\.webp$",
-      "dest": "/assets/gov-official-managed-layer.svg"
-    },
-    {
-      "src": "^/assets/gov-county-operating-model(?:-960)?\\.webp$",
-      "dest": "/assets/gov-county-operating-model.svg"
-    },
-    {
-      "src": "^/assets/gov-governance-trust-pipeline(?:-960)?\\.webp$",
-      "dest": "/assets/gov-governance-trust-pipeline.svg"
-    },
-    {
-      "src": "^/assets/gov-county-network-flywheel(?:-960)?\\.webp$",
-      "dest": "/assets/gov-county-network-flywheel.svg"
-    },
-    {
-      "src": "^/assets/gov-county-briefing(?:-960)?\\.webp$",
-      "dest": "/assets/gov-county-briefing.svg"
-    },
-    {
-      "src": "^/gov-social-card\\.png$",
-      "dest": "/desktop-top(1).png"
-    },
-    {
-      "src": "^/(?:favicon\\.ico|apple-touch-icon\\.png|icon-192\\.png|icon-512\\.png)$",
-      "dest": "/favicon.svg"
-    }
+    { "handle": "filesystem" },
+    { "src": "^/assets/gov-official-managed-layer(?:-960)?\\.webp$", "dest": "/assets/gov-official-managed-layer.svg" },
+    { "src": "^/assets/gov-county-operating-model(?:-960)?\\.webp$", "dest": "/assets/gov-county-operating-model.svg" },
+    { "src": "^/assets/gov-governance-trust-pipeline(?:-960)?\\.webp$", "dest": "/assets/gov-governance-trust-pipeline.svg" },
+    { "src": "^/assets/gov-county-network-flywheel(?:-960)?\\.webp$", "dest": "/assets/gov-county-network-flywheel.svg" },
+    { "src": "^/assets/gov-county-briefing(?:-960)?\\.webp$", "dest": "/assets/gov-county-briefing.svg" },
+    { "src": "^/gov-social-card\\.png$", "dest": "/desktop-top(1).png" },
+    { "src": "^/(?:favicon\\.ico|apple-touch-icon\\.png|icon-192\\.png|icon-512\\.png)$", "dest": "/favicon.svg" },
+    { "src": "^/$", "dest": "/index.html" }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=()"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
       ]
     },
     {
       "source": "/assets/(.*).svg",
       "headers": [
-        {
-          "key": "Content-Type",
-          "value": "image/svg+xml; charset=utf-8"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, stale-while-revalidate=604800"
-        }
-      ]
-    },
-    {
-      "source": "/gov-social-card.png",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "image/png"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, stale-while-revalidate=604800"
-        }
-      ]
-    },
-    {
-      "source": "/favicon.svg",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "image/svg+xml; charset=utf-8"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=604800"
-        }
+        { "key": "Content-Type", "value": "image/svg+xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
       ]
     }
   ]
