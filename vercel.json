@@ -2,7 +2,8 @@
   "version": 2,
   "routes": [
     { "handle": "filesystem" },
-    { "src": "^/assets/gov-official-managed-layer(?:-960)?\\.webp$", "dest": "/assets/gov-official-managed-layer.svg" },
+    { "src": "^/assets/gov-official-managed-layer-960\\.webp$", "dest": "/assets/gov-official-managed-layer-mobile.svg" },
+    { "src": "^/assets/gov-official-managed-layer\\.webp$", "dest": "/assets/gov-official-managed-layer.svg" },
     { "src": "^/assets/gov-county-operating-model(?:-960)?\\.webp$", "dest": "/assets/gov-county-operating-model.svg" },
     { "src": "^/assets/gov-governance-trust-pipeline(?:-960)?\\.webp$", "dest": "/assets/gov-governance-trust-pipeline.svg" },
     { "src": "^/assets/gov-county-network-flywheel(?:-960)?\\.webp$", "dest": "/assets/gov-county-network-flywheel.svg" },
