@@ -1,37 +1,44 @@
 {
   "version": 2,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/api/render"
+      "src": "^/$",
+      "dest": "/api/render.js"
     },
     {
-      "source": "/index.html",
-      "destination": "/api/render"
+      "src": "^/index\\.html$",
+      "dest": "/api/render.js"
     },
     {
-      "source": "/assets/:path*",
-      "destination": "https://raw.githubusercontent.com/LHBUSA/gov/main/assets/:path*"
+      "handle": "filesystem"
     },
     {
-      "source": "/gov-social-card.png",
-      "destination": "https://raw.githubusercontent.com/LHBUSA/gov/main/desktop-top%281%29.png"
+      "src": "^/assets/gov-official-managed-layer(?:-960)?\\.webp$",
+      "dest": "/assets/gov-official-managed-layer.svg"
     },
     {
-      "source": "/favicon.ico",
-      "destination": "/favicon.svg"
+      "src": "^/assets/gov-county-operating-model(?:-960)?\\.webp$",
+      "dest": "/assets/gov-county-operating-model.svg"
     },
     {
-      "source": "/apple-touch-icon.png",
-      "destination": "/favicon.svg"
+      "src": "^/assets/gov-governance-trust-pipeline(?:-960)?\\.webp$",
+      "dest": "/assets/gov-governance-trust-pipeline.svg"
     },
     {
-      "source": "/icon-192.png",
-      "destination": "/favicon.svg"
+      "src": "^/assets/gov-county-network-flywheel(?:-960)?\\.webp$",
+      "dest": "/assets/gov-county-network-flywheel.svg"
     },
     {
-      "source": "/icon-512.png",
-      "destination": "/favicon.svg"
+      "src": "^/assets/gov-county-briefing(?:-960)?\\.webp$",
+      "dest": "/assets/gov-county-briefing.svg"
+    },
+    {
+      "src": "^/gov-social-card\\.png$",
+      "dest": "/desktop-top(1).png"
+    },
+    {
+      "src": "^/(?:favicon\\.ico|apple-touch-icon\\.png|icon-192\\.png|icon-512\\.png)$",
+      "dest": "/favicon.svg"
     }
   ],
   "headers": [
