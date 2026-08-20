@@ -1,4 +1,4 @@
-const SOURCE = 'https://raw.githubusercontent.com/LHBUSA/gov/main/index.html?v=20260820-mobile-lock';
+const SOURCE = 'https://raw.githubusercontent.com/LHBUSA/gov/main/index.html?v=20260820-county-partnership';
 
 const stabilityCss = `<style id="gov-mobile-stability">
 html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;overscroll-behavior-x:none}
@@ -14,6 +14,8 @@ pre,code{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
 .calendly-frame{width:100%!important;min-width:0!important;max-width:100%!important}
 .image-lightbox{width:100%;max-width:100%;overflow-x:hidden}
 .lightbox-stage{max-width:100%}
+.county-partner-banner{display:flex;align-items:center;gap:10px;margin:0 0 18px;padding:10px 13px;border:1px solid #b9cde3;border-radius:10px;background:#fff;color:#123f79;font-family:var(--mono);font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 26px rgba(7,26,51,.05)}
+.county-partner-banner i{width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:#d32336;box-shadow:0 0 0 5px rgba(211,35,54,.09)}
 @media(max-width:720px){
  html,body{overflow-x:hidden!important;overflow-x:clip!important;overscroll-behavior-x:none!important}
  body{touch-action:pan-y pinch-zoom}
@@ -33,6 +35,7 @@ pre,code{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
  .lightbox-stage{width:100%!important;max-width:100%!important;padding:12px!important;overflow-y:auto!important;overflow-x:hidden!important}
  .lightbox-stage img{width:100%!important;max-width:100%!important;height:auto!important}
  .lightbox-stage p{width:auto!important;max-width:100%!important;text-align:center!important}
+ .county-partner-banner{font-size:8px;line-height:1.45}
 }
 </style>`;
 
@@ -40,6 +43,32 @@ function transform(html) {
   if (!html.includes('viewport-fit=cover')) {
     html = html.replace('width=device-width, initial-scale=1', 'width=device-width, initial-scale=1, viewport-fit=cover');
   }
+
+  html = html
+    .replace(/<title>[^<]*<\/title>/i, '<title>PropTechUSA Gov | County Government Data Modernization Partnerships</title>')
+    .replace(/<meta name="description" content="[^"]*">/i, '<meta name="description" content="PropTechUSA Gov partners directly with county governments to modernize assessor, GIS, tax, permit, and public-record delivery through governed APIs, portals, automation, and managed data infrastructure.">')
+    .replace(/<meta property="og:title" content="[^"]*">/i, '<meta property="og:title" content="PropTechUSA Gov | Technology Partnerships for County Governments">')
+    .replace(/<meta property="og:description" content="[^"]*">/i, '<meta property="og:description" content="We partner directly with county governments to modernize official data delivery, reduce staff burden, and launch governed APIs and digital services.">')
+    .replace(/<meta name="twitter:title" content="[^"]*">/i, '<meta name="twitter:title" content="PropTechUSA Gov | County Government Partnerships">')
+    .replace(/<meta name="twitter:description" content="[^"]*">/i, '<meta name="twitter:description" content="Technology partnerships for county governments: official APIs, public data modernization, governed delivery, and managed infrastructure.">')
+    .replace('"serviceType": "Local government data modernization and managed API infrastructure"', '"serviceType": "County government technology partnership for data modernization, managed APIs, public-record delivery, and digital infrastructure"')
+    .replace('<strong>PropTechUSA Gov</strong>', '<strong>PropTechUSA Gov &mdash; County Government Partnerships</strong>')
+    .replace('County-controlled data infrastructure', 'Technology partnerships for county governments')
+    .replace('<div class="eyebrow">Local government data modernization</div>', '<div class="eyebrow">County Government Partnership Program</div><div class="county-partner-banner"><i></i>Seeking county government partners nationwide</div>')
+    .replace('<h1>The official API layer for <span>county data.</span></h1>', '<h1>We partner with <span>county governments</span> to modernize public data.</h1>')
+    .replace('PropTechUSA helps counties turn fragmented assessor, GIS, tax, permit, and public-record systems into governed digital services &mdash; without replacing the systems of record your teams already trust.', 'PropTechUSA works directly with county governments to design, build, and operate modern data infrastructure around the systems your teams already trust. We create official APIs, public portals, approved bulk delivery, and governed AI access while the county retains policy authority and control.')
+    .replace('Request a County Briefing <span aria-hidden="true">&rarr;</span>', 'Discuss a County Partnership <span aria-hidden="true">&rarr;</span>')
+    .replace('Designed for county administrators, assessors, GIS teams, CIOs, records leaders, and procurement teams.', 'This program is specifically for county governments evaluating modernization, public-data delivery, API infrastructure, cost recovery, and long-term technology partnerships.')
+    .replace('The case for modernization', 'Why counties partner with PropTechUSA')
+    .replace('Public data is valuable. Delivering it should not be a daily burden.', 'A technology partner for county government &mdash; not another data scraper.')
+    .replace('County teams often support the same information through websites, email requests, one-off exports, vendor integrations, and legacy interfaces. PropTechUSA turns that repeated work into one governed service layer.', 'We partner with county departments to reduce repetitive fulfillment, modernize official delivery channels, and operate a governed service layer that serves residents, staff, commercial users, and approved technology partners.')
+    .replace('County pilot program', 'County Government Partnership Pilot')
+    .replace('One county. One department. One production service.', 'Start a county government partnership with one production service.')
+    .replace('Begin with a clearly governed dataset and a defined user group. Prove the connector, response contract, refresh process, access policy, and operational value before expanding.', 'We begin with one county department, one governed dataset, and one measurable production outcome. The pilot proves the technology, operating model, procurement fit, and public-service value before expansion.')
+    .replace('Request a Government Briefing <span aria-hidden="true">&rarr;</span>', 'Discuss a County Partnership <span aria-hidden="true">&rarr;</span>')
+    .replace('Choose a time without leaving the page.', 'Book a county government partnership briefing without leaving the page.')
+    .replace('Schedule a PropTechUSA Gov county modernization briefing', 'Schedule a PropTechUSA Gov county government partnership briefing');
+
   return html.replace('</head>', `${stabilityCss}</head>`);
 }
 
@@ -48,7 +77,7 @@ export default async function handler(req, res) {
     const response = await fetch(SOURCE, {
       headers: {
         accept: 'text/html,application/xhtml+xml',
-        'user-agent': 'PropTechUSA-Gov-Renderer/2.0'
+        'user-agent': 'PropTechUSA-Gov-Renderer/3.0'
       },
       cache: 'no-store'
     });
