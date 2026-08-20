@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Official managed county data layer</title>
+  <desc id="desc">County assessor, GIS, tax and permit systems connect through a governed data layer to official APIs, portals, bulk exports and approved AI access.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7faff"/>
+      <stop offset="0.5" stop-color="#eef5ff"/>
+      <stop offset="1" stop-color="#fff5f6"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d3974"/>
+      <stop offset="1" stop-color="#061a34"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e43c4a"/>
+      <stop offset="1" stop-color="#b20f25"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2d72ec"/>
+      <stop offset="1" stop-color="#174db7"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#174db7" stroke-opacity=".065"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#071a33" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="36" fill="url(#grid)"/>
+  <g opacity=".055" fill="#174db7">
+    <path d="M800 38l86 62v92H714v-92z"/>
+    <rect x="739" y="118" width="24" height="132"/>
+    <rect x="788" y="118" width="24" height="132"/>
+    <rect x="837" y="118" width="24" height="132"/>
+    <path d="M690 250h220v28H690z"/>
+  </g>
+
+  <text x="82" y="86" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="18" font-weight="800" letter-spacing="5" fill="#0d3974">COUNTY SYSTEMS OF RECORD</text>
+  <text x="1190" y="86" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="18" font-weight="800" letter-spacing="5" fill="#0d3974">APPROVED DELIVERY</text>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(72 128)">
+      <rect width="380" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/>
+      <circle cx="62" cy="66" r="40" fill="#edf4ff" stroke="#cbdcf2"/>
+      <path d="M38 61l24-18 24 18v31H38zM48 64h28v25H48zM59 69h7v20h-7z" fill="none" stroke="#0d3974" stroke-width="4" stroke-linejoin="round"/>
+      <text x="124" y="55" font-size="26" font-weight="800" fill="#0b2447">Assessor / CAMA</text>
+      <text x="124" y="84" font-size="17" fill="#5a718b">Ownership, values, attributes</text>
+    </g>
+    <g transform="translate(72 286)">
+      <rect width="380" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/>
+      <circle cx="62" cy="66" r="40" fill="#edf4ff" stroke="#cbdcf2"/>
+      <path d="M39 45h20v20H39zM66 45h20v20H66zM39 72h20v20H39z" fill="none" stroke="#0d3974" stroke-width="4"/>
+      <path d="M75 71c-10 0-18 8-18 18 0 13 18 28 18 28s18-15 18-28c0-10-8-18-18-18zm0 11a7 7 0 110 14 7 7 0 010-14z" transform="scale(.72) translate(35 25)" fill="none" stroke="#0d3974" stroke-width="5"/>
+      <text x="124" y="55" font-size="26" font-weight="800" fill="#0b2447">GIS / Parcels</text>
+      <text x="124" y="84" font-size="17" fill="#5a718b">Boundaries, layers, locations</text>
+    </g>
+    <g transform="translate(72 444)">
+      <rect width="380" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/>
+      <circle cx="62" cy="66" r="40" fill="#edf4ff" stroke="#cbdcf2"/>
+      <circle cx="62" cy="66" r="24" fill="none" stroke="#0d3974" stroke-width="4"/>
+      <path d="M69 50c-4-3-15-3-17 3-3 9 17 6 17 15 0 8-14 10-19 5M61 43v46" fill="none" stroke="#0d3974" stroke-width="4" stroke-linecap="round"/>
+      <text x="124" y="55" font-size="26" font-weight="800" fill="#0b2447">Tax / Finance</text>
+      <text x="124" y="84" font-size="17" fill="#5a718b">Rolls, balances, payments</text>
+    </g>
+    <g transform="translate(72 602)">
+      <rect width="380" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/>
+      <circle cx="62" cy="66" r="40" fill="#edf4ff" stroke="#cbdcf2"/>
+      <path d="M45 39h25l13 13v42H45zM70 39v15h13M53 65h22M53 76h22M53 87h14" fill="none" stroke="#0d3974" stroke-width="4" stroke-linejoin="round"/>
+      <text x="124" y="55" font-size="26" font-weight="800" fill="#0b2447">Permits / Records</text>
+      <text x="124" y="84" font-size="17" fill="#5a718b">Applications, cases, inspections</text>
+    </g>
+  </g>
+
+  <g stroke="url(#red)" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M452 194h82c28 0 38 15 38 42v214"/>
+    <path d="M452 352h82c28 0 38 15 38 42v56"/>
+    <path d="M452 510h82c28 0 38-15 38-42v-18"/>
+    <path d="M452 668h82c28 0 38-15 38-42V450"/>
+    <path d="M572 450h54"/>
+  </g>
+  <g fill="#d82638">
+    <circle cx="452" cy="194" r="8"/><circle cx="452" cy="352" r="8"/><circle cx="452" cy="510" r="8"/><circle cx="452" cy="668" r="8"/>
+  </g>
+  <path d="M610 436l18 14-18 14" fill="none" stroke="#d82638" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(626 150)" filter="url(#shadow)">
+    <rect width="390" height="600" rx="34" fill="url(#core)" stroke="#163f76" stroke-width="3"/>
+    <path d="M195 32l39 15v28c0 34-14 53-39 67-25-14-39-33-39-67V47z" fill="#1955b8" stroke="#fff" stroke-width="3"/>
+    <rect x="177" y="76" width="10" height="30" rx="3" fill="#fff"/>
+    <rect x="191" y="65" width="10" height="41" rx="3" fill="#ff4858"/>
+    <rect x="205" y="53" width="10" height="53" rx="3" fill="#fff"/>
+    <text x="195" y="178" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="15" font-weight="800" letter-spacing="3" fill="#ff5260">PROPTECHUSA.GOV</text>
+    <text x="195" y="228" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="42" fill="#fff">Official Managed</text>
+    <text x="195" y="274" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="42" fill="#fff">Data Layer</text>
+    <text x="195" y="310" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#a9c2df">Normalize. Govern. Document. Operate.</text>
+    <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">
+      <g transform="translate(38 360)"><rect width="145" height="86" rx="16" fill="#ffffff0b" stroke="#49709d"/><text x="72" y="38" text-anchor="middle">Identity +</text><text x="72" y="62" text-anchor="middle">Crosswalks</text></g>
+      <g transform="translate(207 360)"><rect width="145" height="86" rx="16" fill="#ffffff0b" stroke="#49709d"/><text x="72" y="38" text-anchor="middle">Provenance +</text><text x="72" y="62" text-anchor="middle">Rights</text></g>
+      <g transform="translate(38 464)"><rect width="145" height="86" rx="16" fill="#ffffff0b" stroke="#49709d"/><text x="72" y="38" text-anchor="middle">Refresh +</text><text x="72" y="62" text-anchor="middle">Monitoring</text></g>
+      <g transform="translate(207 464)"><rect width="145" height="86" rx="16" fill="#ffffff0b" stroke="#49709d"/><text x="72" y="38" text-anchor="middle">Access +</text><text x="72" y="62" text-anchor="middle">Billing</text></g>
+    </g>
+    <line x1="30" y1="572" x2="360" y2="572" stroke="#335a88"/>
+    <text x="195" y="612" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2" fill="#9eb7d2">SECURE BY DESIGN · AUDITABLE BY DEFAULT</text>
+  </g>
+
+  <path d="M1016 450h54" fill="none" stroke="#2670e8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1054 436l18 14-18 14" fill="none" stroke="#2670e8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="url(#blue)" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M1070 450h40c28 0 38-15 38-42V194c0-27 10-42 38-42h16"/>
+    <path d="M1070 450h40c28 0 38-15 38-42v-56c0-27 10-42 38-42h16"/>
+    <path d="M1070 450h40c28 0 38 15 38 42v56c0 27 10 42 38 42h16"/>
+    <path d="M1070 450h40c28 0 38 15 38 42v214c0 27 10 42 38 42h16"/>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(1202 128)"><rect width="326" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/><circle cx="58" cy="66" r="38" fill="#edf4ff"/><path d="M45 54l-13 12 13 12M71 54l13 12-13 12M64 45L52 87" fill="none" stroke="#0d3974" stroke-width="4" stroke-linecap="round"/><text x="112" y="55" font-size="25" font-weight="800" fill="#0b2447">Official API</text><text x="112" y="84" font-size="16" fill="#5a718b">Secure real-time access</text></g>
+    <g transform="translate(1202 286)"><rect width="326" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/><circle cx="58" cy="66" r="38" fill="#edf4ff"/><path d="M36 47h44v31H36zM29 88h58" fill="none" stroke="#0d3974" stroke-width="4" stroke-linecap="round"/><text x="112" y="55" font-size="25" font-weight="800" fill="#0b2447">County Portal</text><text x="112" y="84" font-size="16" fill="#5a718b">Staff and partner access</text></g>
+    <g transform="translate(1202 444)"><rect width="326" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/><circle cx="58" cy="66" r="38" fill="#edf4ff"/><path d="M58 41v40M44 68l14 14 14-14M36 92h44" fill="none" stroke="#0d3974" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="112" y="55" font-size="25" font-weight="800" fill="#0b2447">Bulk Exports</text><text x="112" y="84" font-size="16" fill="#5a718b">Scheduled approved extracts</text></g>
+    <g transform="translate(1202 602)"><rect width="326" height="132" rx="22" fill="#fff" stroke="#c5d5e8"/><circle cx="58" cy="66" r="38" fill="#edf4ff"/><path d="M43 54c-8 0-11 7-8 13-7 4-5 15 3 16-1 8 10 12 15 6M73 54c8 0 11 7 8 13 7 4 5 15-3 16 1 8-10 12-15 6M58 47v42M49 62h18M49 77h18" fill="none" stroke="#0d3974" stroke-width="3.5" stroke-linecap="round"/><text x="112" y="55" font-size="25" font-weight="800" fill="#0b2447">Approved AI</text><text x="112" y="84" font-size="16" fill="#5a718b">Governed model access</text></g>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="13" font-weight="800" letter-spacing="1" fill="#117a50">
+    <g transform="translate(1355 142)"><rect width="140" height="28" rx="14" fill="#eaf8f1" stroke="#9cd6bb"/><circle cx="18" cy="14" r="5" fill="#16a36a"/><text x="76" y="19" text-anchor="middle">APPROVED</text></g>
+    <g transform="translate(1355 300)"><rect width="140" height="28" rx="14" fill="#eaf8f1" stroke="#9cd6bb"/><circle cx="18" cy="14" r="5" fill="#16a36a"/><text x="76" y="19" text-anchor="middle">APPROVED</text></g>
+    <g transform="translate(1355 458)"><rect width="140" height="28" rx="14" fill="#eaf8f1" stroke="#9cd6bb"/><circle cx="18" cy="14" r="5" fill="#16a36a"/><text x="76" y="19" text-anchor="middle">APPROVED</text></g>
+    <g transform="translate(1355 616)"><rect width="140" height="28" rx="14" fill="#eaf8f1" stroke="#9cd6bb"/><circle cx="18" cy="14" r="5" fill="#16a36a"/><text x="76" y="19" text-anchor="middle">APPROVED</text></g>
+  </g>
+
+  <g transform="translate(250 804)" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <g><circle cx="20" cy="20" r="20" fill="#eaf1fb"/><path d="M20 8l12 5v9c0 10-5 16-12 20-7-4-12-10-12-20v-9z" fill="none" stroke="#0d3974" stroke-width="2.5"/><text x="52" y="15" font-size="15" font-weight="800" fill="#0b2447">GOVERNED DATA</text><text x="52" y="36" font-size="14" fill="#5a718b">Policy-aligned and source-aware</text></g>
+    <g transform="translate(360)"><circle cx="20" cy="20" r="20" fill="#eaf1fb"/><path d="M7 29h26M10 27V16h20v11M13 16l7-8 7 8" fill="none" stroke="#0d3974" stroke-width="2.5"/><text x="52" y="15" font-size="15" font-weight="800" fill="#0b2447">COUNTY CONTROL</text><text x="52" y="36" font-size="14" fill="#5a718b">You own policy and priorities</text></g>
+    <g transform="translate(715)"><circle cx="20" cy="20" r="20" fill="#eaf1fb"/><path d="M10 19h20M20 9v20M13 12l14 14M27 12L13 26" fill="none" stroke="#0d3974" stroke-width="2.5"/><text x="52" y="15" font-size="15" font-weight="800" fill="#0b2447">BUILT FOR SCALE</text><text x="52" y="36" font-size="14" fill="#5a718b">Reusable infrastructure, county by county</text></g>
+  </g>
+</svg>
